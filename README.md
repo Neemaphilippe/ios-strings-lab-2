@@ -11,7 +11,14 @@ var problem = "split this string into words and print them on separate lines"
 
 // Your code
 ```
-
+```
+var problem = "split this string into words and print them on separate lines"
+var problemArr = problem.split(separator: " ")
+    print(problemArr)
+for i in problemArr {
+    print(i)
+}
+```
 Example
 
 Input:
@@ -52,7 +59,15 @@ Example:
 Sample Input: `"Swift is the best language"`
 
 Sample Output: `"language best the is Swift"`
+```
+let aString = "Swift is the best language"
+let aStringArr = aString.split(separator: " ")
+let reverseArray = (aStringArr.reversed())
+    for word in reverseArray {
+        print(word, terminator: " ")
+    }
 
+```
 
 ## Question 4
 
@@ -63,6 +78,26 @@ Example:
 Sample Input: `"danaerys dad cat civic bottle"`
 
 Sample Output: `2`
+
+```
+var aString = "danaerys dad cat civic bottle"
+    let aStringArr = aString.split(separator: " ")
+var reverse = String(aString.reversed())
+    let reverseArray = reverse.split(separator: " ")
+
+var palindromeCount = 0
+
+for word in aStringArr {
+    for word1 in reverseArray {
+        if word == word1 {
+            palindromeCount += 1
+        }
+    }
+}
+print(palindromeCount)
+```
+
+
 
 
 ## Question 5
@@ -79,9 +114,10 @@ If a student has more than one 'A' or more than 2 continuous 'L's that student s
 
 Example:
 
-Sample Input: `"PPALLP"`
+Sample Input: `"PPALLP"` 
 
 Sample Output: `true`
+
 
 
 ## Question 6
